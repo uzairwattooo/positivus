@@ -22,16 +22,20 @@ export default function Contact() {
                                     key={item}
                                     className="flex cursor-pointer items-center gap-[10px] font-sans text-[14px] text-[#191A23] md:text-[18px]"
                                 >
-                                    <input
-                                        type="radio"
-                                        name="contactType"
-                                        defaultChecked={index === 0}
-                                        className="peer hidden"
-                                    />
-                                    <span className="flex h-[24px] w-[24px] items-center justify-center rounded-full border border-[#191A23] bg-white md:h-[28px] md:w-[28px]">
-                                        <span className="h-[12px] w-[12px] rounded-full bg-[#B9FF66] opacity-0 transition peer-checked:opacity-100 md:h-[14px] md:w-[14px]" />
+                                    <span className="relative h-[24px] w-[24px] md:h-[28px] md:w-[28px]">
+                                        <input
+                                            type="radio"
+                                            name="contactType"
+                                            defaultChecked={index === 0}
+                                            className="peer absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
+                                        />
+
+                                        <span className="absolute inset-0 rounded-full border border-[#191A23] bg-white" />
+
+                                        <span className="absolute left-1/2 top-1/2 h-[12px] w-[12px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B9FF66] opacity-0 transition-opacity peer-checked:opacity-100 md:h-[14px] md:w-[14px]" />
                                     </span>
-                                    {item}
+
+                                    <span>{item}</span>
                                 </label>
                             ))}
                         </div>

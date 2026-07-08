@@ -89,7 +89,7 @@ export default function UseCasePage() {
                             {results.map((item) => (
                                 <div
                                     key={item.value}
-                                    className="flex h-[110px] w-full items-center justify-center rounded-[14px] bg-white px-5 text-center text-[#191A23] lg:h-[150px] lg:w-[150px]"
+                                    className="flex h-[110px] w-[180px] ml-20 lg:ml-0 items-center justify-center rounded-[14px] bg-white px-5  text-center text-[#191A23] lg:h-[150px] lg:w-[150px]"
                                 >
                                     <div>
                                         <h3 className="font-sans text-[34px] font-medium leading-[100%]">

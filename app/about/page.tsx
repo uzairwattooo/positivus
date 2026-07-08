@@ -81,14 +81,17 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-5">
+                    <div className="flex flex-wrap justify-center lg:grid lg:grid-cols-5">
                         {stats.map(([num, label]) => (
                             <div
                                 key={label}
-                                className="rounded-t-[20px] border-t border-[#191A23] px-4 py-5 text-center lg:text-left"
+                                className="w-1/2 px-0 py-2 lg:w-auto"
                             >
-                                <h3 className="font-sans text-[32px] font-medium">{num}</h3>
-                                <p className="font-sans text-[14px]">{label}</p>
+                                <div className="rounded-t-[20px] border-t border-[#191A23] px-4 py-5 text-center lg:text-left">
+                                    
+                                    <h3 className="font-sans text-[32px] font-medium">{num}</h3>
+                                    <p className="font-sans text-[14px]">{label}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
